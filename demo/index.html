@@ -18,10 +18,10 @@
     margin-bottom: 20px;
     box-sizing: border-box;
 }
-/* .parent::-webkit-scrollbar {
+.parent::-webkit-scrollbar {
     width: 0;
     height: 0;
-} */
+}
 .parent.vertical {
     overflow-y: scroll;
 }
@@ -72,8 +72,8 @@
 </html>
 
 <script>
-    let as1 = new AutoScroll("#vertical",".vertical_wrap",10)
+    let as1 = new AutoScroll("#vertical",10)
     as1.init() ;
-    let as2 = new AutoScroll("#horizontal",".horizontal_wrap",10,'h')
+    let as2 = new AutoScroll("#horizontal",10,'h')
     as2.init() ;
 </script>

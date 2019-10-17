@@ -1,7 +1,7 @@
 class AutoScroll {
-    constructor(el,el1,speed=100,type='v') {
+    constructor(el,speed=100,type='v') {
         this.ele = $(el);//父元素
-        this.ele1 = $(el+' '+el1+':first-child') ;//子元素
+        this.ele1 = $(el+'>:first-child') ;//子元素
         this.ele.append(this.ele.html()) ;
         this.timer ;//计时器
         this.speed  = speed ; //速度
@@ -16,11 +16,10 @@ class AutoScroll {
                 this.ele.scrollTop( this.ele.scrollTop() - this.ele1.height());
             }
         }else if(this.type == 'h') {
-            console.log(this.ele1.width() - this.ele.scrollLeft()) ;
             if( this.ele1.width() - this.ele.scrollLeft() >= 0) {
                 this.ele.scrollLeft((this.ele.scrollLeft())+1);
             }else {
-                console.log('需要跳回顶部了',(this.ele.scrollLeft() - this.ele1.width()))
+                //console.log('需要跳回顶部了',(this.ele.scrollLeft() - this.ele1.width()))
                 this.ele.scrollLeft(this.ele.scrollLeft() - this.ele1.width());
             }
         }
