@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>autoScroll</title>
+</head>
+<!-- 依赖jq -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="../src/js/autoScroll.js"></script>
+
+<style>
+.parent {
+    width: 200px;
+    height: 200px;
+    background: skyblue;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+}
+/* .parent::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+} */
+.parent.vertical {
+    overflow-y: scroll;
+}
+.parent.horizontal {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+}
+.child {
+    height: 100px;
+    background: springgreen;
+    color: white;
+}
+.parent.vertical .child {
+    margin-bottom: 10px;
+}
+.parent.horizontal .child {
+    height: 100%;
+    width: 100px;
+    margin-right: 10px;
+    display: inline-block ;
+}
+
+</style>
+<body>
+    <h2>vertical</h2>
+    
+    <div id="vertical" class="parent vertical">
+        <div class="vertical_wrap">
+            <div class="child">chlid A</div>
+            <div class="child">chlid B</div>
+            <div class="child">chlid C</div>
+            <div class="child">chlid D</div>
+        </div>
+        
+    </div>
+
+    <h2>horizontal</h2>
+    <div id="horizontal" class="parent horizontal">
+        <span class="horizontal_wrap">
+            <div class="child">chlid A</div>
+            <div class="child">chlid B</div>
+            <div class="child">chlid C</div>
+            <div class="child">chlid D</div>
+        </span>
+    </div>
+</body>
+</html>
+
+<script>
+    let as1 = new AutoScroll("#vertical",".vertical_wrap",10)
+    as1.init() ;
+    let as2 = new AutoScroll("#horizontal",".horizontal_wrap",10,'h')
+    as2.init() ;
+</script>

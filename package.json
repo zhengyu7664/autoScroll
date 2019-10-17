@@ -1,0 +1,23 @@
+{
+  "name": "autoscroll",
+  "version": "0.0.1",
+  "description": "autoScroll",
+  "main": "none",
+  "scripts": {
+    "test": "none"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zhengyu7664/autoScroll.git"
+  },
+  "keywords": [
+    "auto",
+    "scroll"
+  ],
+  "author": "zhengyu7664",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zhengyu7664/autoScroll/issues"
+  },
+  "homepage": "https://github.com/zhengyu7664/autoScroll#readme"
+}
