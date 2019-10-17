@@ -49,5 +49,9 @@ class AutoScroll {
     
 }
 
-// vue项目中使用需要export 并import
-// export default AutoScroll ;
+
+if (typeof module !== 'undefined' && typeof module.exports === 'object') {
+    module.exports = AutoScroll;
+} else {
+    window.AutoScroll = AutoScroll;
+}
