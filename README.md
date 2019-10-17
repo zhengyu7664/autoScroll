@@ -4,6 +4,7 @@ one class makes element auto scroll developed by javascript
 
 demo：https://zhengyu7664.github.io/autoScroll/demo/index
 
+![demo ](/path/to/img.jpg)
 # how to use
 this plugin is base on jQuery.
 you can learn to it from demo/index.html .
